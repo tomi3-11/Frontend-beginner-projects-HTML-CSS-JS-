@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #680ff6ec;
+    --surface-color: white;
+    --secondar-color: skyblue;
+    --border-radius-sm: 10px;
+    --border-radius-md: 25px;
+    --border-radius-lg: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar section */
+
+.navbar {
+    /* margin: 10px; */
+    gap: 20rem;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    padding: 1rem;
+    position: fixed;
+    justify-content: space-between;
+    box-shadow: 0 0 1px rgba(0,0,0,0.8);
+    overflow: hidden;
+    background: var(--surface-color);
+    z-index: 1000;
+    width: 100%;
+    height: 60px;
+}
+
+.navbar-left {
+    /* color: var(--primary-color); */
+    background: linear-gradient(120deg, black, blue, skyblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 900;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Hero section  */
+
+.hero {
+    /* margin: 2rem 8rem; */
+    padding: 8rem 5rem;
+}
+
+.hero-image {
+    padding: 10px;
+    border: 10px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+}
+
+.hero-image img{
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #101012, rgb(41, 32, 93), #3a61f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content {
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    width: 100%;
+    text-align: center;
+}
+
+.hero-buttons .btn {
+    padding: 1rem;
+    text-align: center;
+    display: inline-block;
+    margin: 0.5rem;  
+}
+
+.hero-buttons a{
+    display: flex;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.hero-buttons .btn-view {
+    background: var(--primary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.hero-buttons .btn-download {
+    background: var(--surface-color);
+    border: 1px solid #dedede;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    color: #656464;
+}
+
+.hero-buttons .btn-download:hover {
+    background: gray;
+    color: black;
+}
+
