@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+
+    <!-- CodeMirror CSS and Theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css" />
+
+    <!-- CodeMirror JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closebrackets.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #61dafb;
+        }
+
+        .CodeMirror {
+            height: auto;
+            min-height: 300px;
+            border: 1px solid #444;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #61dafb;
+            border: none;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #4ec3e0;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            color: #0f0;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Code Editor</h1>
+
+    <textarea id="code">console.log("Hello, world!");</textarea>
+
+    <button onclick="runCode()">Run Code</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        const editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            mode: "javascript",
+            theme: "dracula",
+            matchBrackets: true,
+            autoCloseBrackets: true
+        });
+
+        function runCode() {
+            const outputEl = document.getElementById("output");
+            outputEl.textContent = "";
+            const code = editor.getValue();
+
+            try {
+                const originalLog = console.log;
+                let consoleOutput = "";
+                console.log = function (...args) {
+                    consoleOutput += args.join(" ") + "\n";
+                };
+
+                new Function(code)(); // Safe execution environment
+                outputEl.textContent = consoleOutput || "Code executed successfully.";
+                console.log = originalLog;
+            } catch (err) {
+                outputEl.textContent = "Error: " + err.message;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
