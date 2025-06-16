@@ -156,9 +156,9 @@
     color: gray;
 }
 
-.aboutMe-grid .aboutMe-grid {
+.aboutMe-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -167,7 +167,7 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -232,7 +232,7 @@ Things to be implemented
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -247,25 +247,30 @@ Things to be implemented
 }
 
 
-.projects-card p
+.projects-card p {
+    margin-bottom: 1rem;
+}
 
 .project-requirements {
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
 }
 
-.project-requirements p {
+.project-requirements a {
     background: gray;
     border-radius: 20px;
     padding: 6px 10px;
     color: white;
+    margin: 0.3rem;
+    text-decoration: none;
+    cursor:default;
 }
 
 .project-btn {
     display: flex;
     /* align-items: center; */
     gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .project-btn .btn {
