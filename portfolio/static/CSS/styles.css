@@ -140,7 +140,7 @@
 }
 
 .aboutMe {
-    padding: 2rem 8rem;
+    padding: 8rem 5rem;
 }
 
 .aboutMe .section-title {
@@ -162,17 +162,17 @@
     gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
 }
 
-.services-grid {
+/* .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-}
+} */
 
 .aboutMe-card {
     padding: 1.5rem;
@@ -213,7 +213,7 @@ Things to be implemented
 /* Project section  */
 
 .projects {
-    padding: 2rem 8rem;
+    padding: 8rem 5rem;
 
 }
 
@@ -235,7 +235,7 @@ Things to be implemented
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
 }
 
 .projects-card {
@@ -253,7 +253,7 @@ Things to be implemented
 
 .project-requirements {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .project-requirements a {
@@ -283,3 +283,30 @@ Things to be implemented
     border-radius: 5px;
 }
 
+/* Skills and Technology  */
+
+
+
+.skills {
+    padding: 8rem 5rem;
+}
+
+.skills .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.skills .section-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: gray;
+    margin-bottom: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
