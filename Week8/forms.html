@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Assignment</title>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+    <h1><u><b>Enter Your Registration Details in this Form</b></u></h1>
+    <form>
+        <div class="names">
+            <label>First Name: </label>
+            <input type="text"> <br>
+            <label>Last Name: </label>
+            <input type="text"> <br>
+        </div>
+
+        <div class="year">
+            <label>Enter your year of Study: </label>
+            <select>
+                <option value="all" selected disabled>--enter-year--</option>
+                <option value="first">First Year</option>
+                <option value="second">Second Year</option>
+                <option value="third">Third Year</option>
+                <option value="fourth">Fourth Year</option>
+            </select> <br>
+        </div>
+
+        <div class="semester">
+            <label>Choose a semester: </label>
+            <select>
+                <option value="2" selected disabled>--Choose-semester--</option>
+                <option value="3">Trimester</option>
+            </select> <br>
+        </div>
+
+        <div class="gender">
+            <label><u>Gender</u></label> <br>
+            <input type="radio"> Male <br>
+            <input type="radio"> Female
+        </div>
+
+        <hr>
+
+        <div class="units">
+            <label><b><u>Units Selection</u></b></label> <br>
+            <input type="checkbox"> ICS 2201 Introduction to IT <br>
+            <input type="checkbox"> ICS 2202 Introduction to programming <br>
+            <input type="checkbox"> ICS 2203 Internet Programming <br>
+            <input type="checkbox"> SMA 2201 Algebra <br>
+            <input type="checkbox"> SMA 2205 Calculus <br>
+            <input type="checkbox"> UCU 1001 Communication Skills <br>
+            <input type="checkbox"> UCU 1002 Research Methods <br>
+            <input type="checkbox"> ICS 1202 Databases <br>
+        </div>
+
+        <hr>
+
+        <div class="text-area">
+            <label>Give your motivation in choosing the units</label> <br>
+            <textarea rows="10" cols="50"></textarea> <br>
+        </div>
+
+        <div class="btn">
+            <button type="submit">Submit</button>
+            <button type="cancel">Cancel</button>
+        </div>
+
+    </form>
+</body>
+
+</html>

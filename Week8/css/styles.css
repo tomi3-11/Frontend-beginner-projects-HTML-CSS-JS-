@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1rem;
+    border: 3px solid black;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.names {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.names input, label {
+    margin-bottom: 5px;
+}
+
+.names input{
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background: lightblue;
+}
+
+.year {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.semester {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.gender {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.units {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+
+.btn button {
+    background: rgb(2, 103, 185);
+    border: none;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.text-area {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.text-area textarea {
+    border-radius: 0.5rem;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #ff0000;
+}
